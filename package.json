@@ -1,0 +1,90 @@
+{
+	"name": "marker-cursor-select",
+	"publisher": "skettios",
+	"repository": {"url": "https://github.com/skettios/marker-cursor-select"},
+	"license": "MIT",
+	"displayName": "Marker-Cursor-Select",
+	"description": "Drop a marker and delete/copy/cut from that marker to cursor.",
+	"version": "1.0.2",
+	"engines": {
+		"vscode": "^1.41.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.markerselect.dropMarker",
+		"onCommand:extension.markerselect.deleteToCursor",
+		"onCommand:extension.markerselect.copyToCursor"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.markerselect.dropMarker",
+				"title": "Drop Marker",
+				"category": "Marker Cursor Select"
+			},
+			{
+				"command": "extension.markerselect.deleteToCursor",
+				"title": "Delete To Cursor",
+				"category": "Marker Cursor Select"
+			},
+			{
+				"command": "extension.markerselect.copyToCursor",
+				"title": "Copy To Cursor",
+				"category": "Marker Cursor Select"
+			},
+			{
+				"command": "extension.markerselect.cutToCursor",
+				"title": "Cut To Cursor",
+				"category": "Marker Cursor Select"
+			},
+			{
+				"command": "extension.markerselect.swapWithCursor",
+				"title": "Swap With Cursor",
+				"category": "Marker Cursor Select"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "extension.markerselect.dropMarker",
+				"key": "ctrl+space"
+			},
+			{
+				"command": "extension.markerselect.deleteToCursor",
+				"key": "ctrl+d"
+			},
+			{
+				"command": "extension.markerselect.copyToCursor",
+				"key": "ctrl+c"
+			},
+			{
+				"command": "extension.markerselect.cutToCursor",
+				"key": "ctrl+x"
+			},
+			{
+				"command": "extension.markerselect.swapWithCursor",
+				"key": "ctrl+m"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^5.2.7",
+		"@types/node": "^12.11.7",
+		"@types/vscode": "^1.41.0",
+		"glob": "^7.1.5",
+		"mocha": "^6.2.2",
+		"typescript": "^3.6.4",
+		"tslint": "^5.20.0",
+		"vscode-test": "^1.2.2"
+	}
+}
