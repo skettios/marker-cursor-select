@@ -1,7 +1,6 @@
 import * as vscode from 'vscode';
 
 export function activate(context: vscode.ExtensionContext) {
-	console.log(context.storagePath);
 	const markerDecorationType = vscode.window.createTextEditorDecorationType({
 		borderWidth: '1px',
 		borderStyle: 'solid',
@@ -81,7 +80,7 @@ export function activate(context: vscode.ExtensionContext) {
 		let beginPos = marker;
 		let endPos = beginPos.translate(0, 1);
 		let decoration: vscode.DecorationOptions[] = [];
-		decoration.push({range: new vscode.Range(beginPos, endPos)});
+		decoration.push({ range: new vscode.Range(beginPos, endPos) });
 		activeEditor.setDecorations(markerDecorationType, decoration);
 	}
 
@@ -94,4 +93,4 @@ export function activate(context: vscode.ExtensionContext) {
 	}, null, context.subscriptions);
 }
 
-export function deactivate() {}
+export function deactivate() { }

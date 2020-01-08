@@ -1,11 +1,13 @@
 {
 	"name": "marker-cursor-select",
 	"publisher": "skettios",
-	"repository": {"url": "https://github.com/skettios/marker-cursor-select"},
+	"repository": {
+		"url": "https://github.com/skettios/marker-cursor-select"
+	},
 	"license": "MIT",
 	"displayName": "Marker-Cursor-Select",
 	"description": "Drop a marker and delete/copy/cut from that marker to cursor.",
-	"version": "1.0.2",
+	"version": "1.0.3",
 	"engines": {
 		"vscode": "^1.41.0"
 	},
@@ -49,23 +51,28 @@
 		"keybindings": [
 			{
 				"command": "extension.markerselect.dropMarker",
-				"key": "ctrl+space"
+				"key": "ctrl+space",
+				"when": "!editorHasSelection"
 			},
 			{
 				"command": "extension.markerselect.deleteToCursor",
-				"key": "ctrl+d"
+				"key": "ctrl+d",
+				"when": "!editorHasSelection"
 			},
 			{
 				"command": "extension.markerselect.copyToCursor",
-				"key": "ctrl+c"
+				"key": "ctrl+c",
+				"when": "!editorHasSelection"
 			},
 			{
 				"command": "extension.markerselect.cutToCursor",
-				"key": "ctrl+x"
+				"key": "ctrl+x",
+				"when": "!editorHasSelection"
 			},
 			{
 				"command": "extension.markerselect.swapWithCursor",
-				"key": "ctrl+m"
+				"key": "ctrl+m",
+				"when": "!editorHasSelection"
 			}
 		]
 	},
