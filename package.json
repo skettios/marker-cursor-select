@@ -7,7 +7,7 @@
 	"license": "MIT",
 	"displayName": "Marker-Cursor-Select",
 	"description": "Drop a marker and delete/copy/cut from that marker to cursor.",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"engines": {
 		"vscode": "^1.41.0"
 	},
